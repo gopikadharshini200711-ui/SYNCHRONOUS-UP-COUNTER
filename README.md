@@ -30,17 +30,49 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 /* write all the steps invloved */
 
-**PROGRAM**
+**PROGRAM**UP COUNTER
+module ex11(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
+
+DOWN COUNTER
+module ex12(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out-1;
+end
+endmodule
+
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
+Developed by: RegisterNumber:25008019
 */
 
-**RTL LOGIC UP COUNTER**
+**RTL LOGIC UP COUNTER**<img width="1486" height="786" alt="image" src="https://github.com/user-attachments/assets/3f1c0cba-2227-41ba-9fea-137808102e4b" />
+<img width="1472" height="802" alt="image" src="https://github.com/user-attachments/assets/725fe6eb-e2f7-4e65-821f-98f520d701aa" />
 
-**TIMING DIAGRAM FOR IP COUNTER**
 
-**TRUTH TABLE**
+**TIMING DIAGRAM FOR IP COUNTER**<img width="1492" height="805" alt="image" src="https://github.com/user-attachments/assets/b5b49d61-562d-4028-ace2-73d4fc03dce3" />
+<img width="1487" height="800" alt="image" src="https://github.com/user-attachments/assets/4bc7189b-de38-4e42-b1ca-74719884f17c" />
 
-**RESULTS**
+
+**TRUTH TABLE**<img width="820" height="531" alt="image" src="https://github.com/user-attachments/assets/186fc9e2-bb2c-41b7-9119-a36ec3f59157" />
+<img width="544" height="275" alt="image" src="https://github.com/user-attachments/assets/b8999896-eb34-4536-b36d-407f1560d6f3" />
+
+
+**RESULTS** Thus the truth table of logic gates in Quartus II using Verilog programming is studied
+ and verified successfully.
